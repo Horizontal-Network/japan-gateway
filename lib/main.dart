@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:japangateway/screens/home/home.dart';
-import 'package:japangateway/layout.dart';
+import 'package:japangateway/config/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Japan Gateway',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Layout(),
+      routerConfig: router,
     );
   }
 }
