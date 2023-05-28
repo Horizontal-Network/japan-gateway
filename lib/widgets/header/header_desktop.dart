@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:japangateway/widgets/header/custom_tab_bar.dart';
 
 class HeaderDesktop extends StatelessWidget {
   const HeaderDesktop({super.key});
@@ -7,7 +7,11 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      padding: const EdgeInsets.only(top: 50),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [CustomTabBar()]
+      )
     );
   }
 }
