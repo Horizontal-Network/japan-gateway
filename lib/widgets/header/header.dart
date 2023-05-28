@@ -9,12 +9,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SliverAppBar(
-      pinned: true,
-      expandedHeight: 150,
-      backgroundColor: Colors.black,
-      flexibleSpace:
-          ResponsiveWidget(mobile: HeaderMobile(), desktop: HeaderDesktop()),
-    );
+    return const ResponsiveWidget(
+        mobile: HeaderMobile(), desktop: HeaderDesktop());
   }
 }
