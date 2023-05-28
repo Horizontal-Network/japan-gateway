@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Japan Gateway',
+      debugShowCheckedModeBanner: false, // To remove the debug banner, shit's annoying
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'M_PLUS_1'
       ),
       routerConfig: router,
     );
