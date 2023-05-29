@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:japangateway/util/color_converter.dart';
 import 'package:japangateway/widgets/button/solid_button.dart';
+import 'package:go_router/go_router.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key});
@@ -45,7 +46,7 @@ class HeaderSection extends StatelessWidget {
             ),
             Text("YOUR ADVENTURE BEGINS HERE", style: TextStyle(color: ColorConverter().hexToColor('#E3E3E3'), fontSize: 13.5, fontWeight: FontWeight.w600, letterSpacing: 3.76, height: 0.8)),
             const SizedBox(height: 20),
-            SolidButton(onPressed: () {}, text: "PLAN YOUR JOURNEY")
+            SolidButton(onPressed: () {context.go(context.namedLocation('genie'));}, text: "PLAN YOUR JOURNEY")
           ],
         )
       )

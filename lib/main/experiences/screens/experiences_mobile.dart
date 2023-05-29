@@ -5,6 +5,6 @@ class ExperiencesMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Genie Mobile"));
+    return Center(child: Text("Experiences Page - Mobile"));
   }
 }
