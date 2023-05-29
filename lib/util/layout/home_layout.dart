@@ -13,7 +13,7 @@ class HomeLayout extends Layout {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: PreferredSize(
-          preferredSize: Size(MediaQuery.of(context).size.width, 100.0),
+          preferredSize: Size(MediaQuery.of(context).size.width, 200.0),
           child: const Header(),
         ),
         body: CustomScrollView(
