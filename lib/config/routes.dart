@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:japangateway/util/layout/genie_layout.dart';
 import 'package:japangateway/util/layout/home_layout.dart';
-import 'package:japangateway/screens/about_us/about_us_screen.dart';
-import 'package:japangateway/screens/experiences/experiences_screen.dart';
-import 'package:japangateway/screens/destinations/destinations_screen.dart';
-import 'package:japangateway/screens/contact_us/contact_us_screen.dart';
+import 'package:japangateway/main/about_us/screens/about_us_screen.dart';
+import 'package:japangateway/main/experiences/screens/experiences_screen.dart';
+import 'package:japangateway/main/destinations/screens/destinations_screen.dart';
+import 'package:japangateway/main/contact_us/screens/contact_us_screen.dart';
 import 'package:japangateway/screens/genie/genie_screen.dart';
-import 'package:japangateway/screens/home/home_screen.dart';
+import 'package:japangateway/main/home/screens/home_screen.dart';
 
 final routes = <GoRoute>[
   GoRoute(

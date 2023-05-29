@@ -5,6 +5,6 @@ class AboutUsMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Genie Mobile"));
+    return Center(child: Text("About Us Page - Mobile"));
   }
 }

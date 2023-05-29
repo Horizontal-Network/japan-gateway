@@ -5,6 +5,6 @@ class DestinationsDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Genie Desktop"));
+    return Center(child: Text("Destinations Page - Desktop"));
   }
 }
