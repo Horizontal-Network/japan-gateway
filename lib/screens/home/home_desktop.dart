@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:japangateway/widgets/button/solid_button.dart';
+import 'package:japangateway/widgets/header/header_section.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({super.key});
@@ -11,16 +11,11 @@ class HomeDesktop extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assets/images/gateway.png"),
-          fit: BoxFit.cover,
-        )),
-        child: Column(
-          children: [
-            Text("YOUR GATEWAY"),
-            Text("TO JAPAN"),
-            Text("YOUR ADVENTURE BEGINS HERE"),
-            SolidButton(onPressed: () {}, text: "PLAN YOUR JOURNEY")
-          ],
-        ));
+              image: AssetImage("assets/images/gateway.png"),
+              fit: BoxFit.cover,
+            )
+        ),
+        child: const HeaderSection()
+    );
   }
 }
