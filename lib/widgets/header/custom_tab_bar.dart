@@ -8,15 +8,15 @@ class CustomTabBar extends StatelessWidget {
   Widget build(BuildContext context){
     return Row(
       children: [
-        CustomTab(title: "CONTACT US"),
+        CustomTab(title: "CONTACT US", location: "contact-us"),
         const SizedBox(width: 60),
-        CustomTab(title: "DESTINATIONS"),
+        CustomTab(title: "DESTINATIONS", location: "destinations"),
         const SizedBox(width: 5),
         Image.asset('images/white-japan-gate.png'),
         const SizedBox(width: 2),
-        CustomTab(title: "EXPERIENCES"),
+        CustomTab(title: "EXPERIENCES", location: "experiences"),
         const SizedBox(width: 78),
-        CustomTab(title: "ABOUT US"),
+        CustomTab(title: "ABOUT US", location: "about-us"),
       ]
     );
   }
