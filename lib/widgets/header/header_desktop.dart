@@ -10,6 +10,8 @@ class HeaderDesktop extends StatelessWidget {
         padding: const EdgeInsets.only(top: 50),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [CustomTabBar()]));
+            children: const [CustomTabBar()]
+        )
+    );
   }
 }
