@@ -5,7 +5,7 @@ import 'package:japangateway/genie/screens/genie_screen.dart';
 import 'package:japangateway/main/home_layout.dart';
 import 'package:japangateway/main/about_us/screens/about_us_screen.dart';
 import 'package:japangateway/main/experiences/screens/experiences_screen.dart';
-import 'package:japangateway/main/destinations/screens/destinations_screen.dart';
+import 'package:japangateway/main/services/screens/services_screen.dart';
 import 'package:japangateway/main/contact_us/screens/contact_us_screen.dart';
 import 'package:japangateway/main/home/screens/home_screen.dart';
 
@@ -24,10 +24,10 @@ final routes = <GoRoute>[
               return const HomeLayout(child: AboutUsScreen());
             }),
         GoRoute(
-            path: 'destinations',
-            name: 'destinations',
+            path: 'services',
+            name: 'services',
             builder: (BuildContext context, GoRouterState state) {
-              return const HomeLayout(child: DestinationsScreen());
+              return const HomeLayout(child: ServicesScreen());
             }),
         GoRoute(
             path: 'experiences',

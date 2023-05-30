@@ -9,8 +9,8 @@ class SolidButton extends Button {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        backgroundColor: ColorConverter().hexToColor('#E3E3E3'),
-        foregroundColor: ColorConverter().hexToColor('#110000'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         textStyle: const TextStyle(
           fontFamily: 'M_PLUS_1',
@@ -19,7 +19,7 @@ class SolidButton extends Button {
           fontSize: 13.5,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(3),
         )
       ),
       onPressed: onPressed,

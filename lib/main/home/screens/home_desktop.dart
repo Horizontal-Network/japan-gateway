@@ -15,7 +15,16 @@ class HomeDesktop extends StatelessWidget {
               fit: BoxFit.cover,
             )
         ),
-        child: const HeaderSection()
+        child: CustomScrollView(
+          slivers: [
+            SliverList(
+              delegate: SliverChildListDelegate([
+                const SizedBox(height: 125),
+                const HeaderSection()
+              ])
+            )
+          ]
+        )
     );
   }
 }
