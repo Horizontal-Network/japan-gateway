@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:japangateway/util/color_converter.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomTab extends StatelessWidget {
@@ -12,8 +11,8 @@ class CustomTab extends StatelessWidget {
   Widget build(BuildContext context){
     return TextButton(
       style: TextButton.styleFrom(
-        foregroundColor: ColorConverter().hexToColor('#E3E3E3'),
-        textStyle: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, letterSpacing: 3.76)
+        foregroundColor: Colors.black,
+        textStyle: const TextStyle(fontFamily: "M_PLUS_1", fontSize: 13.5, fontWeight: FontWeight.w800, letterSpacing: 3.76)
       ),
       onPressed: () {context.go(context.namedLocation(location));},
       child: Text(title)
