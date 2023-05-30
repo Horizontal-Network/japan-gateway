@@ -9,7 +9,6 @@ class GenieManager extends StateNotifier<Widget> {
   GenieManager()
       : screenList = [const GenieIntro()],
         index = 0,
-        // super(const GenieIntro());
         super(const GenieIntro());
 
   void addScreen(Widget screen) => screenList.add(screen);

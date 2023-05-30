@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:japangateway/genie/genie_manager.dart';
 import 'package:japangateway/config/router.dart';
-import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  usePathUrlStrategy();
+  setPathUrlStrategy();
   runApp(const ProviderScope(child: MyApp()));
 }
 
