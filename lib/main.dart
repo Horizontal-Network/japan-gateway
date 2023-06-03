@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // To remove the debug banner, shit's annoying
       theme: ThemeData(
         scaffoldBackgroundColor: ColorConverter().hexToColor('#FFFFF9'),
-        fontFamily: 'M_PLUS_1p'
+        fontFamily: 'M_PLUS_1'
       ),
       routerConfig: router,
     );
