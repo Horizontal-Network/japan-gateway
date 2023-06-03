@@ -23,11 +23,23 @@ class HeaderSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("YOUR GATEWAY", style: TextStyle(color: Colors.white, fontFamily: 'M_PLUS_1', fontSize: 64, fontWeight: FontWeight.w700)),
-              const Text("TO JAPAN", style: TextStyle(color: Colors.white, fontFamily: 'M_PLUS_1', fontSize: 64, height: 1.3, fontWeight: FontWeight.w700)),
+              const Text("YOUR GATEWAY", style: TextStyle(color: Colors.white, fontFamily: 'M_PLUS_1p', fontSize: 64, fontWeight: FontWeight.w700)),
+              const Text("TO JAPAN", style: TextStyle(color: Colors.white, fontFamily: 'M_PLUS_1p', fontSize: 64, height: 1.3, fontWeight: FontWeight.w700)),
               const Text("YOUR ADVENTURE BEGINS HERE", style: TextStyle(color: Colors.white, fontSize: 13.5, fontWeight: FontWeight.w700, letterSpacing: 3.76, height: 1.4)),
               const SizedBox(height: 14),
-              SolidButton(onPressed: () {context.go(context.namedLocation('genie'));}, text: "PLAN YOUR JOURNEY")
+              SolidButton(
+                onPressed: () {
+                  context.go(context.namedLocation('genie'));
+                }, 
+                text: "PLAN YOUR JOURNEY",
+                buttonColor: Colors.white,
+                fontColor: Colors.black,
+                horizontalPadding: 20,
+                verticalPadding: 30,
+                buttonFontFamily: 'M_PLUS_1p',
+                buttonFontWeight: FontWeight.w700,
+                buttonRadius: 3,
+              )
             ],
           )
         )

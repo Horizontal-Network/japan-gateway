@@ -3,23 +3,42 @@ import 'package:japangateway/widgets/button/button.dart';
 import 'package:japangateway/util/color_converter.dart';
 
 class SolidButton extends Button {
-  const SolidButton({super.key, required super.onPressed, required super.text});
+  const SolidButton({ 
+    super.key, 
+    required super.onPressed, 
+    required super.text,
+    required this.buttonColor,
+    required this.fontColor,
+    required this.horizontalPadding,
+    required this.verticalPadding,
+    required this.buttonFontFamily,
+    required this.buttonFontWeight,
+    required this.buttonRadius
+  });
+
+  final Color buttonColor;
+  final Color fontColor;
+  final double horizontalPadding;
+  final double verticalPadding;
+  final String buttonFontFamily;
+  final FontWeight buttonFontWeight;
+  final double buttonRadius;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        textStyle: const TextStyle(
-          fontFamily: 'M_PLUS_1',
-          fontWeight: FontWeight.w900,
+        backgroundColor: buttonColor,
+        foregroundColor: fontColor,
+        padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: verticalPadding),
+        textStyle: TextStyle(
+          fontFamily: buttonFontFamily,
+          fontWeight: buttonFontWeight,
           letterSpacing: 3.76,
           fontSize: 13.5,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(buttonRadius),
         )
       ),
       onPressed: onPressed,

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:japangateway/widgets/header/header_section.dart';
 import 'package:japangateway/widgets/header/mouse_icon_row.dart';
+import 'package:japangateway/widgets/home_sections/mission_section/mission_section.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({super.key});
@@ -17,7 +18,8 @@ class HomeDesktop extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate([
                 const HeaderSection(),
-                const MouseIconRow()
+                const MouseIconRow(),
+                const MissionSection()
               ])
             )
           ]
