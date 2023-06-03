@@ -22,7 +22,8 @@ flutter:
   assets:
     - assets/images/gateway.png
     - assets/images/red-gate-icon.png
-  
+    - assets/images/mouse-icon.png
+    
   fonts:
     - family: Spectral
       fonts:
