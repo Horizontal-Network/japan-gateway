@@ -17,17 +17,17 @@ class MissionLeftColumn extends StatelessWidget {
         Container(
           color: darkColor,
           height: 58,
-          width: 401,
+          width: 413,
           child: Row(
             children: [
               Text(
                 'RELOCATION', 
                 style: TextStyle(
                   color: lightColor, 
-                  fontFamily: 'M_PLUS_1p', 
+                  fontFamily: 'M_PLUS_1', 
                   fontSize: 62, 
                   fontWeight: FontWeight.bold,
-                  height: 1.1
+                  height: 1.05
                 )
               )
             ]
@@ -37,7 +37,7 @@ class MissionLeftColumn extends StatelessWidget {
           text: TextSpan(
             style: TextStyle(
               color: darkColor, 
-              fontFamily: 'M_PLUS_1p', 
+              fontFamily: 'M_PLUS_1', 
               fontSize: 62,
               height: 1.1
             ),
@@ -57,7 +57,7 @@ class MissionLeftColumn extends StatelessWidget {
           'WE PROVIDE CUSTOMER-SPECIFIC SOLUTIONS FOR', 
           style: TextStyle(
             color: darkColor, 
-            fontFamily: 'M_PLUS_1p', 
+            fontFamily: 'M_PLUS_1', 
             fontSize: 14, 
             fontWeight: FontWeight.w700,
             letterSpacing: 2.8,
@@ -68,7 +68,7 @@ class MissionLeftColumn extends StatelessWidget {
           'LIVING, INVESTING, AND BUSINESS EXPANSION IN JAPAN', 
           style: TextStyle(
             color: darkColor, 
-            fontFamily: 'M_PLUS_1p', 
+            fontFamily: 'M_PLUS_1', 
             fontSize: 14, 
             fontWeight: FontWeight.w700,
             letterSpacing: 2.8,
