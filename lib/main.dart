@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:japangateway/config/router.dart';
+import 'package:japangateway/util/color_converter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Japan Gateway',
       debugShowCheckedModeBanner: false, // To remove the debug banner, shit's annoying
       theme: ThemeData(
-        fontFamily: 'M_PLUS_1'
+        scaffoldBackgroundColor: ColorConverter().hexToColor('#FFFFF9'),
+        fontFamily: 'M_PLUS_1p'
       ),
       routerConfig: router,
     );
