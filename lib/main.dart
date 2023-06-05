@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:japangateway/genie/genie_manager.dart';
 import 'package:japangateway/config/router.dart';
 import 'package:url_strategy/url_strategy.dart';
 
@@ -8,10 +7,6 @@ void main() {
   setPathUrlStrategy();
   runApp(const ProviderScope(child: MyApp()));
 }
-
-final genieStateProvider = StateNotifierProvider<GenieManager, Widget>((ref) {
-  return GenieManager();
-});
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
