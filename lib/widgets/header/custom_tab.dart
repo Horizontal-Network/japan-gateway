@@ -12,9 +12,16 @@ class CustomTab extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(
         foregroundColor: Colors.black,
-        textStyle: const TextStyle(fontFamily: "M_PLUS_1", fontSize: 13.5, fontWeight: FontWeight.w800, letterSpacing: 3.76)
+        textStyle: const TextStyle(
+          fontFamily: "M_PLUS_1", 
+          fontSize: 14, 
+          fontWeight: FontWeight.w800, 
+          letterSpacing: 3.29,
+        )
       ),
-      onPressed: () {context.go(context.namedLocation(location));},
+      onPressed: () {
+        context.go(context.namedLocation(location));
+      },
       child: Text(title)
     );
   }
