@@ -10,7 +10,7 @@ class MissionSection extends StatelessWidget {
     return Container(
       height: 850,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(136, 55, 50, 0),
+        padding: const EdgeInsets.fromLTRB(85, 55, 50, 0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:japangateway/widgets/header/header_section.dart';
 import 'package:japangateway/widgets/header/mouse_icon_row.dart';
 import 'package:japangateway/widgets/home_sections/mission_section/mission_section.dart';
+import 'package:japangateway/widgets/home_sections/support_section/support_section.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({super.key});
@@ -19,7 +20,8 @@ class HomeDesktop extends StatelessWidget {
               delegate: SliverChildListDelegate([
                 const HeaderSection(),
                 const MouseIconRow(),
-                const MissionSection()
+                const MissionSection(),
+                const SupportSection()
               ])
             )
           ]

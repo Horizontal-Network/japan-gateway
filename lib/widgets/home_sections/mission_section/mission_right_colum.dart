@@ -7,7 +7,7 @@ class MissionRightColumn extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(35, 42, 0, 0),
+          padding: const EdgeInsets.fromLTRB(85, 42, 0, 0),
           child:  Stack(
             clipBehavior: Clip.none,
             children: [
