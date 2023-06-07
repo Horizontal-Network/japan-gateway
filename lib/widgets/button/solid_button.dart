@@ -34,8 +34,8 @@ class SolidButton extends Button {
         textStyle: TextStyle(
           fontFamily: buttonFontFamily,
           fontWeight: buttonFontWeight,
-          letterSpacing: 3.76,
-          fontSize: 13.5,
+          letterSpacing: 3.29,
+          fontSize: 14,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(buttonRadius),

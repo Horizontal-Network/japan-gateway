@@ -25,23 +25,36 @@ flutter:
     - assets/images/mouse-icon.png
     - assets/images/tmp/mission-photo-placeholder-1.png
     - assets/images/tmp/mission-photo-placeholder-2.png
+    - assets/images/tmp/support-photo-placeholder.png
     
   fonts:
     - family: Spectral
       fonts:
-        - asset: fonts/Spectral/Spectral-Regular.ttf
-        - asset: fonts/Spectral/Spectral-Bold.ttf
+        - asset: assets/fonts/Spectral/Spectral-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Spectral/Spectral-Bold.ttf
           weight: 700
-    - family: M_PLUS_1p
+    - family: M_PLUS_1
       fonts:
-        - asset: fonts/M_PLUS_1p/MPLUS1p-Light.ttf
-        - asset: fonts/M_PLUS_1p/MPLUS1p-Bold.ttf
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-Light.ttf
+          weight: 300
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-Bold.ttf
           weight: 700
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/M_PLUS_1/MPLUS1-Black.ttf
+          weight: 900
     - family: Lato
       fonts: 
-        - asset: fonts/Lato/Lato-Regular.ttf
-          weight: 400
-        - asset: fonts/Lato/Lato-Thin.ttf
+        - asset: assets/fonts/Lato/Lato-Thin.ttf
           weight: 300
-        - asset: fonts/Lato/Lato-Bold.ttf
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
           weight: 700
