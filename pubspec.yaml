@@ -26,6 +26,7 @@ flutter:
     - assets/images/tmp/mission-photo-placeholder-1.png
     - assets/images/tmp/mission-photo-placeholder-2.png
     - assets/images/tmp/support-photo-placeholder.png
+    - assets/images/tmp/placeholder-button.png
     
   fonts:
     - family: Spectral
