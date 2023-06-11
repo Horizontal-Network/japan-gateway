@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:japangateway/genie/providers/screen_list_service_provider.dart';
+import 'package:japangateway/genie/providers/screen_stack_provider.dart';
 
 class GenieScreen extends ConsumerWidget {
   const GenieScreen({super.key});
@@ -9,6 +9,6 @@ class GenieScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final currentScreen = ref.watch(currentScreenProvider);
     //TODO: convert screen id to widget
-    return Placeholder();
+    return Container(child: currentScreen.widget);
   }
 }
