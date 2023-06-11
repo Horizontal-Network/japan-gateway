@@ -1,38 +1,32 @@
-// import 'package:hive/hive.dart';
+import 'package:sembast/sembast.dart';
+import 'package:sembast_web/sembast_web.dart';
 
-// class ScreenRepository {
-//   @override
-//   String get boxName => "screens";
+// stores screen.id <string>
+class ScreenRepository {
+  late final Database _database;
+  late final StoreRef<int, Map<String, dynamic>> _store;
+  late int _index;
 
-//   Future<List<ScreenItem>> toList() async {
-//     Box box = await getBox();
-//     final values = box.values;
-//     List<ScreenItem> list = [];
-//     for (var item in values) {
-//       list.add(ScreenItem.fromJson(item));
-//     }
+  ScreenRepository._(this._database, this._store, this._index);
 
-//     return list;
-//   }
+  static Future<ScreenRepository> create() async {
+    var factory = databaseFactoryWeb;
+    var database = await factory.openDatabase('');
+    var store = intMapStoreFactory.store();
 
-//   Future<ScreenItem> getLast() async {
-//     Box box = await getBox();
-//     return ScreenItem.fromJson(await box.get(box.length - 1));
-//   }
+    return ScreenRepository._(database, store, 0);
+  }
 
-//   Future<void> push(ScreenItem item) async {
-//     Box box = await getBox();
-//     await box.put(box.length, item.toJson());
-//   }
+  // Sembast Keys start from 1
+  Future<String> get current async =>
+      (await _store.record(_index).get(_database))!.values.first;
 
-//   Future<void> pushList(List<ScreenItem> list) async {
-//     for (var item in list) {
-//       push(item);
-//     }
-//   }
+  Future<void> push(String id) async {
+    _index = await _store.add(_database, {"id": id});
+  }
 
-//   Future<void> pop() async {
-//     Box box = await getBox();
-//     await box.delete(box.length - 1);
-//   }
-// }
+  Future<void> pop() async {
+    await _store.record(_index).delete(_database);
+    _index--;
+  }
+}
