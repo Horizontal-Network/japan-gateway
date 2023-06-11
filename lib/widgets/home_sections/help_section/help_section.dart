@@ -32,7 +32,8 @@ class HelpSection extends StatelessWidget {
                       fontFamily: 'Lato',
                       fontSize: 22,
                       fontWeight: FontWeight.w400
-                    )
+                    ),
+                    textAlign: TextAlign.center,
                   ) 
                 ),
                 Padding(
@@ -71,22 +72,22 @@ class HelpSection extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 42),
+                  padding: const EdgeInsets.only(top: 100),
                   child: Row(
                     children: [
                       Image.asset(
                         'images/red-gate-icon.png',
-                        width: 45,
-                        height: 45.92,
+                        width: 29.32,
+                        height: 29.92,
                       ),
                       const SizedBox(width: 30),
                       Text(
                         'Relocating to Japan is hard, but we make it easy.',
                         style: TextStyle(
                           fontFamily: 'M_PLUS_1',
-                          fontSize: 28,
+                          fontSize: 19,
                           color: darkColor,
-                          fontWeight: FontWeight.w400
+                          fontWeight: FontWeight.w300
                         )
                       )
                     ],
