@@ -4,6 +4,7 @@ import 'package:japangateway/widgets/header/mouse_icon_row.dart';
 import 'package:japangateway/widgets/home_sections/help_section/help_section.dart';
 import 'package:japangateway/widgets/home_sections/mission_section/mission_section.dart';
 import 'package:japangateway/widgets/home_sections/support_section/support_section.dart';
+import 'package:japangateway/widgets/home_sections/why_section/why_section.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({super.key});
@@ -21,7 +22,8 @@ class HomeDesktop extends StatelessWidget {
                 const MouseIconRow(),
                 const MissionSection(),
                 const SupportSection(),
-                const HelpSection()
+                const HelpSection(),
+                const WhySection()
               ])
             )
           ]
