@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:japangateway/widgets/header/header_section.dart';
 import 'package:japangateway/widgets/header/mouse_icon_row.dart';
+import 'package:japangateway/widgets/home_sections/help_section/help_section.dart';
 import 'package:japangateway/widgets/home_sections/mission_section/mission_section.dart';
 import 'package:japangateway/widgets/home_sections/support_section/support_section.dart';
 
@@ -21,7 +20,8 @@ class HomeDesktop extends StatelessWidget {
                 const HeaderSection(),
                 const MouseIconRow(),
                 const MissionSection(),
-                const SupportSection()
+                const SupportSection(),
+                const HelpSection()
               ])
             )
           ]
