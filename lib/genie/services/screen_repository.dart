@@ -7,9 +7,9 @@ class ScreenRepository {
   late final StoreRef<int, Map<String, dynamic>> _store;
   late int _index;
 
-  ScreenRepository._(this._database, this._store, this._index);
+  factory ScreenRepository._(database, store, index) {}
 
-  static Future<ScreenRepository> create() async {
+  static Future<ScreenRepository> create({List<String> list = const []}) async {
     var factory = databaseFactoryWeb;
     var database = await factory.openDatabase('');
     var store = intMapStoreFactory.store();
