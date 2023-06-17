@@ -6,12 +6,13 @@ part of 'screen_list_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$screenListHash() => r'c59020b6c68a46a0f46d5fa70d856fb805dd4446';
+String _$screenListHash() => r'38ad01554cdf38e5316c4c064af9c11efa818bec';
 
-/// See also [screenList].
-@ProviderFor(screenList)
-final screenListProvider = AutoDisposeProvider<ScreenList>.internal(
-  screenList,
+/// See also [ScreenList].
+@ProviderFor(ScreenList)
+final screenListProvider =
+    AutoDisposeAsyncNotifierProvider<ScreenList, List<Screen>>.internal(
+  ScreenList.new,
   name: r'screenListProvider',
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product') ? null : _$screenListHash,
@@ -19,5 +20,5 @@ final screenListProvider = AutoDisposeProvider<ScreenList>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef ScreenListRef = AutoDisposeProviderRef<ScreenList>;
+typedef _$ScreenList = AutoDisposeAsyncNotifier<List<Screen>>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

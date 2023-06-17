@@ -1,32 +1,42 @@
+import 'package:japangateway/genie/models/screen_entry/screen_entry.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sembast_web/sembast_web.dart';
 
-// stores screen.id <string>
 class ScreenRepository {
-  late final Database _database;
-  late final StoreRef<int, Map<String, dynamic>> _store;
-  late int _index;
+  static late final Database _database;
+  static late final StoreRef<int, Map<String, dynamic>> _store;
+  static late int _index;
 
-  factory ScreenRepository._(database, store, index) {}
+  ScreenRepository._(
+      Database database, StoreRef<int, Map<String, dynamic>> store, int index) {
+    _database = database;
+    _store = store;
+    _index = index;
+  }
 
-  static Future<ScreenRepository> create({List<String> list = const []}) async {
+  static Future<Database> _create() async {
     var factory = databaseFactoryWeb;
-    var database = await factory.openDatabase('');
+    return await factory.openDatabase('');
+  }
+
+  static Future<ScreenRepository> getExistingOrCreate() async {
+    var database = await _create();
     var store = intMapStoreFactory.store();
 
-    return ScreenRepository._(database, store, 0);
+    var index = await store.count(database);
+
+    return ScreenRepository._(database, store, index);
   }
 
-  // Sembast Keys start from 1
-  Future<String> get current async =>
-      (await _store.record(_index).get(_database))!.values.first;
+  Future<List<ScreenEntry>> get toList async {
+    final recordSnapshot = await _store.find(_database);
 
-  Future<void> push(String id) async {
-    _index = await _store.add(_database, {"id": id});
-  }
+    if (recordSnapshot.isEmpty) {
+      return [];
+    }
 
-  Future<void> pop() async {
-    await _store.record(_index).delete(_database);
-    _index--;
+    return recordSnapshot.map((snapshot) {
+      return ScreenEntry.fromJson(snapshot.value);
+    }).toList();
   }
 }

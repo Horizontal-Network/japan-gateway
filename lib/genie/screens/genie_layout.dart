@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:japangateway/genie/providers/current_string/current_string_provider.dart';
+import 'package:japangateway/genie/providers/screen_list/screen_list_provider.dart';
 import 'package:japangateway/genie/widgets/genie_header.dart';
 
 class GenieLayout extends ConsumerWidget {
@@ -8,22 +8,11 @@ class GenieLayout extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentString = ref.watch(currentStringProvider);
-
-    // return Scaffold(
-    //     appBar: PreferredSize(
-    //       preferredSize: Size(MediaQuery.of(context).size.width, 200.0),
-    //       child: const GenieHeader(),
-    //     ),
-    //     body: CustomScrollView(
-    //       slivers: <Widget>[
-    //         SliverToBoxAdapter(child: GenieScreen(Text("here"))),
-    //       ],
-    //     ));
-    return currentString.when(
-        data: (id) => Text(id),
+    final screenList = ref.watch(screenListProvider);
+    return screenList.when(
+        data: (data) => data.last.widget,
         error: (error, stack) => Text(error.toString()),
-        loading: () => const Text("loading"));
+        loading: () => const CircularProgressIndicator());
   }
 }
 
