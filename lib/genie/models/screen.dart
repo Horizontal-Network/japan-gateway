@@ -8,7 +8,9 @@ class Screen {
   late final String _type;
   String get type => _type;
 
-  Screen(this.widget, {this.active = false}) {
+  Screen? next;
+
+  Screen(this.widget, {this.active = false, this.next}) {
     _type = widget.runtimeType.toString();
   }
 

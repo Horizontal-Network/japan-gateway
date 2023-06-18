@@ -18,7 +18,7 @@ class ScreenList extends _$ScreenList {
 
     if (entryList.isEmpty) {
       return <Screen>[
-        Screen(TestGenieScreen(), active: true),
+        Screen(TestGenieScreen(), active: true, next: Screen(TestTwoScreen())),
       ];
     }
 
@@ -27,5 +27,25 @@ class ScreenList extends _$ScreenList {
     }).toList();
 
     return list;
+  }
+
+  FutureOr<Screen> handleNext(Screen screen) async {
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() {
+      List<Screen> list = state.requireValue;
+      list.add(screen);
+      return Future(() => list);
+    });
+
+    return screen;
+  }
+
+  FutureOr<void> handlePrevious() async {
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() {
+      List<Screen> list = state.requireValue;
+      list.removeLast();
+      return Future(() => list);
+    });
   }
 }

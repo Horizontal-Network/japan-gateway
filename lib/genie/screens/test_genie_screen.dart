@@ -10,3 +10,12 @@ class TestGenieScreen extends StatelessWidget {
     return const Text("Test");
   }
 }
+
+class TestTwoScreen extends StatelessWidget {
+  const TestTwoScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text("Screen Two");
+  }
+}

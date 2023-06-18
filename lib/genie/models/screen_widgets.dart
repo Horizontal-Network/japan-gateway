@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:japangateway/genie/models/screen.dart';
 import 'package:japangateway/genie/screens/test_genie_screen.dart';
 
 class ScreenWidgets {
