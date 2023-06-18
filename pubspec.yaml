@@ -28,6 +28,7 @@ flutter:
     - assets/images/tmp/support-photo-placeholder.png
     - assets/images/tmp/placeholder-button.png
     - assets/images/tmp/why-photo-placeholder.png
+    - assets/images/message-question.png
     
   fonts:
     - family: Spectral
