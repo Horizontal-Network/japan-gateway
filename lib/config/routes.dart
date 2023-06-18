@@ -8,7 +8,7 @@ import 'package:japangateway/main/services/screens/services_screen.dart';
 import 'package:japangateway/main/contact_us/screens/contact_us_screen.dart';
 import 'package:japangateway/genie/screens/genie_screen.dart';
 import 'package:japangateway/main/home/screens/home_screen.dart';
-import 'package:japangateway/util/pop_up_animation.dart';
+import 'package:japangateway/util/remove_default_transition.dart';
 
 final routes = <GoRoute>[
   GoRoute(
